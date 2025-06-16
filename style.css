@@ -1,0 +1,51 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+.main{
+    height: 100%;
+    width: 100%;
+}
+
+.hide{
+    display: none;
+}
+
+.car, .enemy{
+    height: 70px;
+    width: 50px;
+    bottom: 120px;
+    position: absolute;
+    background-color: red;
+}
+
+.game-area{
+    height: 100%;
+    width: 400px;
+    margin: 0 auto;
+    background-color: rgb(34, 33, 33);
+    position: relative;
+    overflow: hidden;
+}
+
+.lines{
+    height: 100px;
+    width: 10px;
+    background-color: white;
+    position: absolute;
+    margin-left: 195px;
+}
+
+.score{
+    width: 200px;
+    line-height: 70px;
+    background-color: rgb(83, 217, 83);
+    color: white;
+    /* top: 23px;
+    left: 23px; */
+    /* margin: 23px; */
+    text-align: center;
+}
