@@ -1,51 +1,107 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow: hidden;
   height: 100%;
+  font-family: "Roboto", sans-serif;
 }
 
-.main{
-    height: 100%;
-    width: 100%;
+.main {
+  height: 100%;
+  width: 100%;
+  background-image: url(images/game_bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* background-size: cover; */
 }
 
-.hide{
-    display: none;
+.hide {
+  display: none;
 }
 
-.car, .enemy{
-    height: 70px;
-    width: 50px;
-    bottom: 120px;
-    position: absolute;
-    background-color: red;
+/* .main img {
+  transform: rotate(360deg);
+} */
+.car {
+  height: 70px;
+  width: 40px;
+  bottom: 120px;
+  position: absolute;
+  /* background-color: red; */
+  background-image: url(images/white-removebg-preview.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transform: rotateZ(360deg);
+  overflow: hidden;
+  /* mix-blend-mode: color-dodge; */
 }
 
-.game-area{
-    height: 100%;
-    width: 400px;
-    margin: 0 auto;
-    background-color: rgb(34, 33, 33);
-    position: relative;
-    overflow: hidden;
+.enemy {
+  height: 70px;
+  width: 40px;
+  bottom: 120px;
+  position: absolute;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% 100%;
+  transform: rotateZ(180deg);
+  background-image: url(images/blue-car.png),
+    url(images/red-removebg-preview.png);
+  overflow: hidden;
 }
 
-.lines{
-    height: 100px;
-    width: 10px;
-    background-color: white;
-    position: absolute;
-    margin-left: 195px;
+.game-area {
+  height: 100%;
+  width: 400px;
+  margin: 0 auto;
+  background-color: rgb(34, 33, 33);
+  position: relative;
+  overflow: hidden;
+  border-right: 7px dashed white;
+  border-left: 7px dashed white;
 }
 
-.score{
-    width: 200px;
-    line-height: 70px;
-    background-color: rgb(83, 217, 83);
-    color: white;
-    /* top: 23px;
-    left: 23px; */
-    /* margin: 23px; */
-    text-align: center;
+.lines {
+  height: 100px;
+  width: 10px;
+  background-color: white;
+  position: absolute;
+  margin-left: 195px;
+}
+
+.start-screen {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  margin: auto;
+  /* height: 100%; */
+  width: 28%;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+}
+
+.start-screen p {
+  padding: 12px;
+  background-color: #ff7f50;
+  width: 400px;
+  text-align: center;
+  /* margin-left: 12px; */
+  cursor: pointer;
+  /* z-index: 12;
+  position: absolute; */
+}
+
+.score {
+  width: 200px;
+  line-height: 70px;
+  background-color: #27ae60;
+  color: white;
+  position: absolute;
+  top: 23px;
+  left: 23px;
+  text-align: center;
 }

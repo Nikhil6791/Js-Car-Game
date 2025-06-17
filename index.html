@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Car Game</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="main">
-        <div class="score"></div>
-        <div class="start-screen">
-            <p>Click to start game <br>
-                Use arrow keys to move <br>
-                If you hit another you will lose
-            </p>
-        </div>
-        <div class="game-area hide">
-            
-        </div>
+      <!-- <img
+        src="blue_car-removebg-preview.png"
+        style="height: 83px; width: 83px; position: absolute"
+        alt=""
+      /> -->
+      <div class="score"></div>
+      <div class="start-screen">
+        <p class="game-detail">
+          Click or Press Enter to start game <br />
+          Use arrow keys to move <br />
+          If you hit another car you will lose
+        </p>
+      </div>
+      <div class="game-area"></div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
