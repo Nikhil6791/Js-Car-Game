@@ -36,14 +36,14 @@ function keyUp(e) {
 }
 
 function isCollide(a, b) {
-  aRect = a.getBoundingClientRect();
-  bRect = b.getBoundingClientRect();
-  console.log(aRect, bRect);
+  let aRect = a.getBoundingClientRect();
+  let bRect = b.getBoundingClientRect();
+  const padding = 1; // adjust as needed
   return !(
-    aRect.bottom < bRect.top ||
-    aRect.top > bRect.bottom ||
-    aRect.right < bRect.left ||
-    aRect.left > bRect.right
+    aRect.bottom - padding < bRect.top + padding ||
+    aRect.top + padding > bRect.bottom - padding ||
+    aRect.right - padding < bRect.left + padding ||
+    aRect.left + padding > bRect.right - padding
   );
 }
 
@@ -72,8 +72,10 @@ function moveEnemyCar(car) {
   let enemyCar = document.querySelectorAll(".enemy");
   enemyCar.forEach(function (item) {
     if (isCollide(car, item)) {
-      //   let collidePosition = isCollide(car, item);
-      //   console.log(collidePosition);
+      let collidePosition = isCollide(car, item);
+      console.log(collidePosition);
+      //   console.log(isCollide(car, item));
+
       endGame();
     }
     if (item.y > 750) {

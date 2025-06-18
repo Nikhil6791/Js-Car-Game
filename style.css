@@ -24,7 +24,7 @@ body {
   transform: rotate(360deg);
 } */
 .car {
-  height: 70px;
+  height: 60px;
   width: 40px;
   bottom: 120px;
   position: absolute;
@@ -38,9 +38,9 @@ body {
 }
 
 .enemy {
-  height: 70px;
+  height: 60px;
   width: 40px;
-  bottom: 120px;
+  bottom: 10px;
   position: absolute;
   background-repeat: no-repeat, no-repeat;
   background-size: 100% 100%;
